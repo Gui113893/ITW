@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div id="calculadora">
+        <input type="number" id="n1">
+        <select name="operador" id="operador">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" id="n2">
+        <div id="res" value="0">0</div>
+        <button onclick="calculadora()">Calcular!</button>
+        <button onclick="main()">Fatorial!</button>
+
+    </div>
+
+    <script>
+        function calculadora() {
+            var n1 = document.getElementById("n1").value;
+            var op = document.getElementById("operador").value;
+            var n2 = document.getElementById("n2").value;
+            var res = document.getElementById("res");
+            var res1 = res.value
+
+            switch (op) {
+                case "+":
+                    res1 = parseFloat(n1) + parseFloat(n2);
+                    break;
+                case "-": 
+                    res1 = parseFloat(n1) - parseFloat(n2);
+                    break;
+                case "*":
+                    res1 = parseFloat(n1) * parseFloat(n2);
+                    break;
+                case "/":
+                    if (n2 == "0") {
+                        alert("Operação impossível");
+                    } else {
+                        res1 = parseFloat(n1) / parseFloat(n2);
+                    }
+                    break;
+                default:
+                    alert("Operation not supported!");
+                    break;
+            } 
+            
+            res.innerHTML = res1
+            return res1
+        }
+
+        function fatorial(x) {
+            /*if (x == 1){
+                return 1
+            } else {
+                return x * fatorial(x-1)
+            }*/
+
+            ft = 1
+            for (i=1; i<=x; i++){
+                ft *= i
+            }
+            return ft
+        }
+
+        function main() {
+            var n1 = document.getElementById("n1").value;
+            alert(fatorial(n1))
+        }
+    </script>
+</body>
+</html>

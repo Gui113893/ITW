@@ -1,0 +1,41 @@
+.table {
+    width: 500px;
+    height: 500px;
+    border: solid 1px black;
+    margin: auto;
+}
+
+.row-header {
+    height: 85px;
+    border-bottom: solid 1px black;
+}
+
+.row-main {
+    height: 364px;
+    border-bottom: solid 1px black;
+}
+
+.col-links {
+    height: 364px;
+    width: 167px;
+    border-right: solid 1px black;
+    float: left;
+}
+
+.col-content {
+    height: 364px;
+    width: 332px;
+    float: right;
+}
+
+.row-bottom {
+    height: 49px;
+}
+
+h1, p {
+    padding: 0px; 
+    margin: 0px; 
+    border: 0px; 
+    text-align:center;
+}
+

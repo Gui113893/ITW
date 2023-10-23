@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/wwwroot/lib/font-awesome/dist/css/font-awesome.min.css">
+    <title>Bootstrap</title>
+</head>
+<body>
+    <div class="container">
+       <!-- Nav tabs -->
+       <ul class="nav nav-tabs" id="myTab" role="tablist">
+         <li class="nav-item" role="presentation">
+           <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+         </li>
+         <li class="nav-item" role="presentation">
+           <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+         </li>
+         <li class="nav-item" role="presentation">
+           <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Messages</button>
+         </li>
+       </ul>
+       
+       <!-- Tab panes -->
+       <div class="tab-content">
+         <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="container">
+              <form>
+                <div class="mb-3 row">
+                  <label for="inputName" class="col-4 col-form-label">Name</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" name="inputName" id="inputName" placeholder="Name">
+                  </div>
+                </div>
+                <fieldset class="mb-3 row">
+                  <legend class="col-form-legend col-4">Group name</legend>
+                  <div class="col-8">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="" id="">
+                      <label class="form-check-label" for="">
+                        Default radio
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="" id="" checked disabled>
+                      <label class="form-check-label" for="">
+                        Default checked radio
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+                <div class="mb-3 row">
+                  <div class="offset-sm-4 col-sm-8">
+                    <button type="submit" class="btn btn-primary">Action</button>
+                  </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
+                    Default checkbox
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="" checked>
+                  <label class="form-check-label" for="">
+                    Checked checkbox
+                  </label>
+                </div>
+                </div>
+              </form>
+            </div>
+         </div>
+         <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab"> profile </div>
+         <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab"> messages </div>
+       </div>
+    </div>
+
+    <script src="/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

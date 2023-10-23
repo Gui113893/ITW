@@ -1,0 +1,17 @@
+fieldset {
+    width: 700px;
+    height: 300px;
+}
+
+.Nome, .Curso {
+    height: 5%;
+    padding: 2%;
+}
+
+
+input[type = text] {
+    font-size: 1rem; 
+    border: 1px solid #ced4da; 
+    border-radius: 0.25rem; 
+    width: 50%; 
+}

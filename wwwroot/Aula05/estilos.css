@@ -1,0 +1,16 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}  
+
+main { 
+    margin-top: 56px; margin-bottom: 56px; 
+}
+
+.banner {
+    height: 500px;
+    background-image: url("McQueen11.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

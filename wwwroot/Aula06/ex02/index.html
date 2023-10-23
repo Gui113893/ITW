@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript test file</title>
+    <style>
+        .res {
+            float: right;
+            margin-right: 73%;
+        }
+    </style>
+</head>
+<body>
+    <input id="op1"/>
+    <span id="op-view">-</span>
+    <input id="op2"/>
+    <span>=</span><br>
+    <div id="res" class="res">___</div>
+    <button onclick="calcula()">Calcular</button>
+    <script>
+        function calcula() {
+            var x = parseFloat(document.getElementById("op1").value);
+            var y = parseFloat(document.getElementById("op2").value);
+            var op = document.getElementById("op-view").innerHTML;
+            console.log(x);
+            console.log(y);
+            console.log(op);
+
+            if (op == "+") {
+                res = x + y
+            }
+            else if (op == "-") {
+                res = x - y
+            }
+            else if (op == "*") {
+                res = x * y
+            }
+            else if (op == "/") {
+                if (y == 0) {
+                    alert("Não é possível dividir por 0")
+                    console.log("Erro de inserção ( Não é possível dividir por 0)")
+                }
+                else {
+                    res = x / y
+                }
+            }
+            
+            console.log(res)
+            document.getElementById("res").innerHTML = res
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/wwwroot/lib/font-awesome/dist/css/font-awesome.min.css">
+    <link rel="stylesheet" href="ex02.css">
+    <title>Concerto</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-3"><h3>Bilheteira de Qualidade</h3></div>
+        </div>
+        <hr>
+        <form action="http://192.168.160.36/FormEcho.aspx" method="post">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="row mb-3 form-group">
+                        <div class="col-sm-2"><label for="nome" class="form-label">Nome</label></div>
+                        <div class="col-sm-10"><input type="text" class="form-control" name="Nome" id="nome" placeholder="Insira o seu nome"></div>
+                        <div class="row justify-content-end">
+                            <div class="col-md-10 text-danger" id="name_Error"><i class="fa fa-exclamation-triangle"></i> Erro: Tamanho mínimo de 10 letras e máximo 100</div>
+                        </div>
+                    </div>
+                    <div class="row mb-3 form-group">
+                        <div class="col-sm-2"><label for="morada" class="form-label">Morada</label></div>
+                        <div class="col-sm-10"><textarea class="form-control" name="Morada" id="morada" rows="3" placeholder="Insira a sua morada"></textarea></div>
+                        <div class="row justify-content-end">
+                            <div class="col-md-10 text-danger" id="morada_Error"><i class="fa fa-exclamation-triangle"></i> Erro: Tamanho mínimo de 20 letras e máximo 200</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="row mb-3 form-group">
+                        <div class="col-sm-2"><label for="email" class="form-label">Email</label></div>
+                        <div class="col-sm-10"><input type="email" class="form-control" name="Email" id="email" placeholder="abc@mail.com"></div>
+                        <div class="row justify-content-end">
+                            <div class="col-md-10 text-danger" id="email_Error"><i class="fa fa-exclamation-triangle"></i> Erro: Insira um email</div>
+                        </div>
+                    </div>
+                    <div class="row mb-3 form-group">
+                        <div class="col-sm-2">Local</div>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="100" id="relva_frente" name="local">
+                                <label class="form-check-label" for="relva_frente">Relva Frente (100€)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="80" id="relva_tras" name="local">
+                                <label class="form-check-label" for="relva_tras">Relva Trás (80€)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="50" id="bancada_lateral" name="local">
+                                <label class="form-check-label" for="bancada_lateral">Bancada Lateral (50€)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="65" id="bancada_central" name="local">
+                                <label class="form-check-label" for="bancada_central">Bancada Central (65€)</label>
+                            </div>
+                        </div>
+                        <div class="row justify-content-end">
+                            <div class="col-md-10 text-danger" id="local_Error"><i class="fa fa-exclamation-triangle"></i> Erro: Escolher no mínimo 2 opções</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <input type="hidden" id="max_pagamento" name="max_pagamento" value="" />
+            <div class="row justify-content-center">
+                <div class="col-sm-3">
+                    <input type="submit" value="Validar e enviar" class="btn btn-outline-success" id="submit"/>
+                    <input type="reset" value="Limpar Erros" class="btn btn-outline-danger" id="reset"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="/wwwroot/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="ex02.js"></script>
+</body>
+</html>

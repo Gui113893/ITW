@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        
+        body, input, select, textarea {
+            font-family: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif; 
+        }
+
+        body {
+            margin-left: 10%;
+            margin-right: 10%;
+            width: 80%;
+        }
+
+        input[type=submit], input[type=reset]{
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem; 
+            margin-top: 0%;
+            margin-left: 0%;
+            border-radius: 15%;
+        }
+        
+
+        select, input[type=text], input[type=password] {
+            font-size: 1rem; 
+            border: 1px solid #ced4da; 
+            border-radius: 0.25rem; 
+            width: 100%; 
+        }
+
+        dt {
+            float: left;
+            clear: left;
+        }
+        
+        dd.butoes {
+            margin-left: 41%;
+            margin-top: 20px;
+        }
+
+        dd {
+            margin-left: 130px;
+        }
+        
+        fieldset { 
+            border: 1px solid #000000; 
+            border-radius: 0.25rem; 
+        }
+        
+        textarea { 
+            width: 100%; 
+            font-size: 1rem; border: 1px solid #ced4da; 
+            border-radius: 0.25rem; 
+        }
+
+        fieldset.veiculo {
+            float: left;
+            clear: left;
+            width: 46%;
+            margin-right: 1%;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Informação pessoal</h1>
+    <form name="PersonData" action="http://192.168.160.36/FormEcho.aspx" method="post">
+        <input type="hidden" name="FormName" value="UserForm" />
+        <dl>
+            <fieldset><legend>Informação pessoal</legend>
+            
+            <dt><label for="Course">Cursos:</label></dt>
+            <dd>
+                <select name="Cursos" id="Course">
+                    <option value="0" selected="selected">- - Curso - -</option>
+                    <option value="1">Licenciatura em Engenharia Informática</option>
+                    <option value="2">Mestrado Integrado em Engenharia de Computadores e Telemática</option>
+                    <option value="3">Mestrado Integrado em Engenharia Eletrónica e Telecomunicações</option>
+                    <option value="4">Outro</option>
+                </select>
+            </dd>
+
+            <dt><label for="Name">Nome:</label></dt>
+            <dd>
+                <input type="text" name="FirstName" placeholder="Nome" id="Name"/>
+            </dd>
+            
+            
+            <dt><label for="LastName">Sobrenome:</label></dt>
+            <dd>
+                <input type="text" name="LastName" placeholder="Sobrenome" id="LastName"/>
+            </dd>
+            
+            
+            <dt><label for="Password">Password:</label></dt>
+            <dd>
+                <input type="password" name="Password" placeholder="Digite a palavra passe" id="Password"/>
+            </dd>
+            
+            </fieldset>
+            
+            <fieldset><legend><label for="Com">Comentários:</label></legend>
+                <textarea name="Comments" rows="6" cols="80"  id="Com" placeholder="Insira os seus comentários"></textarea>
+            </fieldset>
+            
+            
+            
+            <fieldset class="veiculo"><legend>Meios de transporte</legend>
+               
+                <input type="checkbox" name="veiculo" id="Bike" value="Bicicleta"><label for="Bike">Bicicleta</label></br> 
+                <input type="checkbox" name="veiculo" id="Car" value="Carro"><label for="Car">Carro</label></br>
+                <input type="checkbox" name="veiculo" id="Train" value="Comboio"><label for="Train">Comboio</label></br>
+                        
+            </fieldset>
+
+
+            <fieldset class="cor"><legend>Cor preferida</legend>
+               
+                <input type="radio" name="cor" id="Azul" value="Azul"><label for="Azul">Azul</label></br> 
+                <input type="radio" name="cor" id="Verde" value="Verde"><label for="Verde">Verde</label></br>
+                <input type="radio" name="cor" id="Vermelho" value="Vermelho"><label for="Vermelho">Vermelho</label></br>
+                <input type="radio" name="cor" id="Outra" value="Outra"><label for="Outra">Outra</label></br>
+                            
+            </fieldset>
+            
+            
+            <dd class="butoes">
+                <input type="submit" name="Button" value="Enviar" class="butao"/>
+                <input type="reset" name="resetBtn" value="Limpar" class="butao"/>
+            </dd>
+
+        </dl>
+    </form>
+</body>
+</html>
